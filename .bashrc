@@ -57,7 +57,7 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[[01;32m\]\u@\h\[[00m\]:\[[01;34m\]\w\[[00m\]\$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -66,7 +66,7 @@ unset color_prompt force_color_prompt
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+    PS1="\[]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\]$PS1"
     ;;
 *)
     ;;
@@ -199,16 +199,16 @@ format_font()
 
 	case $# in
 	2)
-		eval $output="'\[\033[0;${2}m\]'"
+		eval $output="'\[[0;${2}m\]'"
 		;;
 	3)
-		eval $output="'\[\033[0;${2};${3}m\]'"
+		eval $output="'\[[0;${2};${3}m\]'"
 		;;
 	4)
-		eval $output="'\[\033[0;${2};${3};${4}m\]'"
+		eval $output="'\[[0;${2};${3};${4}m\]'"
 		;;
 	*)
-		eval $output="'\[\033[0m\]'"
+		eval $output="'\[[0m\]'"
 		;;
 	esac
 }
@@ -263,15 +263,15 @@ bash_prompt() {
 	
 	
 	## 256 COLOR CODES
-	local NO_FORMAT="\[\033[0m\]"
-	local ORANGE_BOLD="\[\033[1;38;5;208m\]"
-	local TOXIC_GREEN_BOLD="\[\033[1;38;5;118m\]"
-	local RED_BOLD="\[\033[1;38;5;1m\]"
-	local CYAN_BOLD="\[\033[1;38;5;87m\]"
-	local BLACK_BOLD="\[\033[1;38;5;0m\]"
-	local WHITE_BOLD="\[\033[1;38;5;15m\]"
-	local GRAY_BOLD="\[\033[1;90m\]"
-	local BLUE_BOLD="\[\033[1;38;5;74m\]"
+	local NO_FORMAT="\[[0m\]"
+	local ORANGE_BOLD="\[[1;38;5;208m\]"
+	local TOXIC_GREEN_BOLD="\[[1;38;5;118m\]"
+	local RED_BOLD="\[[1;38;5;1m\]"
+	local CYAN_BOLD="\[[1;38;5;87m\]"
+	local BLACK_BOLD="\[[1;38;5;0m\]"
+	local WHITE_BOLD="\[[1;38;5;15m\]"
+	local GRAY_BOLD="\[[1;90m\]"
+	local BLUE_BOLD="\[[1;38;5;74m\]"
 	
 	
 	
@@ -433,7 +433,7 @@ bash_prompt() {
 	
 
 	# GENERATE SEPARATORS WITH FANCY TRIANGLE
-	local TRIANGLE=$'\uE0B0'	
+	local TRIANGLE=$''	
 	local SEPARATOR_1=$SEPARATOR_FORMAT_1$TRIANGLE
 	local SEPARATOR_2=$SEPARATOR_FORMAT_2$TRIANGLE
 	local SEPARATOR_3=$SEPARATOR_FORMAT_3$TRIANGLE
@@ -446,7 +446,7 @@ bash_prompt() {
 	############################################################################
 	case $TERM in
 	xterm*|rxvt*)
-		local TITLEBAR='\[\033]0;\u:${NEW_PWD}\007\]'
+		local TITLEBAR='\[]0;\u:${NEW_PWD}\]'
 		;;
 	*)
 		local TITLEBAR=""
@@ -459,7 +459,8 @@ bash_prompt() {
 	## BASH PROMT                                                             ##
 	## Generate promt and remove format from the rest                         ##
 	############################################################################
-	PS1="$TITLEBAR\n${PROMT_USER}${SEPARATOR_1}${PROMT_HOST}${SEPARATOR_2}${PROMT_PWD}${SEPARATOR_3}${PROMT_INPUT}"
+	PS1="$TITLEBAR
+${PROMT_USER}${SEPARATOR_1}${PROMT_HOST}${SEPARATOR_2}${PROMT_PWD}${SEPARATOR_3}${PROMT_INPUT}"
 
 	
 
@@ -490,11 +491,5 @@ unset bash_prompt
 
 
 ### EOF ###
-
 neofetch
-
-##-----------------------------------------------------
-## synth-shell-prompt.sh
-if [ -f /home/aaron/.config/synth-shell/synth-shell-prompt.sh ] && [ -n "$( echo $- | grep i )" ]; then
-	source /home/aaron/.config/synth-shell/synth-shell-prompt.sh
-fi
+eval "$(starship init bash)"
