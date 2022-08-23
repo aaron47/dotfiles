@@ -116,7 +116,7 @@ font-2 = "Iosevka Nerd Font:size=16;4"
 font-3 = "Iosevka Nerd Font:size=18;4"
 font-4 = "Source Code Pro Bold:size=13;3"
 
-modules-left = workspaces dot mpd
+modules-left = workspaces dot xwindow
 
 spacing = 0
 dim-value = 1.0
@@ -132,7 +132,7 @@ tray-scale = 1.0
 
 enable-ipc = true
 
-cursor-click = 
+cursor-click = pointer
 cursor-scroll = 
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

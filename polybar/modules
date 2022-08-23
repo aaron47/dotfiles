@@ -11,6 +11,7 @@
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:60:...%
+label-empty = "Desktop"
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
