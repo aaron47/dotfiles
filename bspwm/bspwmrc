@@ -22,8 +22,7 @@ bspc config urgent_border_color 	      "#ebcb8b"
 
 bspc rule -a firefox desktop='^2'
 bspc rule -a discord desktop='^3'
-bspc rule -a spotify desktop='^4'
-bspc rule -a code desktop='^5'
+bspc rule -a code desktop='^4'
 
 wm-restack=bspwm
 
