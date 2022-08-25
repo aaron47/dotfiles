@@ -52,7 +52,7 @@ font-4 = "Source Code Pro Bold:size=13;3"
 # Default
 
 modules-left = launcher dot YLD network YRD spacing  CLD volume CRD spacing RBL brightness RBR spacing GLD battery GRD
-modules-center = workspaces
+modules-center = 
 modules-right =
 
 spacing = 0
@@ -117,7 +117,6 @@ font-3 = "Iosevka Nerd Font:size=18;4"
 font-4 = "Source Code Pro Bold:size=13;3"
 
 modules-left = workspaces dot xwindow
-
 spacing = 0
 dim-value = 1.0
 

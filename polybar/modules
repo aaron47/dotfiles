@@ -241,7 +241,7 @@ content-font = 3
 content-foreground= ${color.blue}
 content-background = ${color.background} 
 content-padding=1
-click-left=alacritty
+click-left=zsh rofi-power-menu/powermenu
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -282,6 +282,7 @@ ramp-signal-4 = " "
 ramp-signal-foreground = ${color.background}
 ramp-signal-background = ${color.orange}
 ramp-signal-font = 2
+
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
