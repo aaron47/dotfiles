@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + Return
-	alacritty
+	urxvt
 
 #file manager
 alt + f
@@ -28,6 +28,9 @@ super + e
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
+
+Print
+	gnome-screenshot
 
 #
 # bspwm hotkeys
