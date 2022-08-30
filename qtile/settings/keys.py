@@ -28,9 +28,14 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     # Toggle floating
     ([mod, "shift"], "f", lazy.window.toggle_floating()),
 
+    # Toggle fullscreen
+    ([mod], "f", lazy.window.toggle_fullscreen()),
+
     # Move windows up or down in current stack
     ([mod, "shift"], "j", lazy.layout.shuffle_down()),
     ([mod, "shift"], "k", lazy.layout.shuffle_up()),
+    ([mod, "shift"], "h", lazy.layout.shuffle_left()),
+    ([mod, "shift"], "l", lazy.layout.shuffle_right()),
 
     # Toggle between different layouts as defined below
     ([mod], "Tab", lazy.next_layout()),
@@ -52,7 +57,7 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     # ------------ App Configs ------------
 
     # Menu
-    ([mod], "m", lazy.spawn("rofi -show drun")),
+    ([mod], "e", lazy.spawn("rofi -show drun")),
 
     # Window Nav
     ([mod, "shift"], "m", lazy.spawn("rofi -show")),
@@ -61,10 +66,13 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     ([mod], "b", lazy.spawn("firefox")),
 
     # File Explorer
-    ([mod], "f", lazy.spawn("thunar")),
+    (["mod1"], "f", lazy.spawn("nemo")),
 
     # Discord
-    ([mod], "d", lazy.spawn("Discord")),
+    (["mod1"], "d", lazy.spawn("discord")),
+
+    # Spotify
+    (["mod1"], "s", lazy.spawn("spotify")),
 
     # Terminal
     ([mod], "Return", lazy.spawn("urxvt")),

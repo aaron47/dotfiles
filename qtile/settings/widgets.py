@@ -28,7 +28,7 @@ def powerline(fg="light", bg="dark"):
         **base(fg, bg),
         text="", # Icon: nf-oct-triangle_left
         fontsize=37,
-        padding=-2
+        padding=-3
     )
 
 
@@ -85,7 +85,7 @@ primary_widgets = [
 
     icon(bg="color3", text=' '),  # Icon: nf-fa-feed
     
-    widget.Net(**base(bg='color3'), interface='enp0s3'),
+    widget.Net(**base(bg='color3'), interface='wlo1'),
 
     powerline('color2', 'color3'),
 
