@@ -44,9 +44,7 @@ URxvt*borderless: true
 
 
 !! Copy Paste & Other Extensions
-URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select
-URxvt.copyCommand: xclip -i -selection clipboard
-URxvt.pasteCommand: xclip -o -selection clipboard
+URxvt.perl-ext-common: default,url-select
 URxvt.urlLauncher: firefox
 URxvt.underlineURLs: true
 URxvt.urlButton: 1
