@@ -1,40 +1,40 @@
 URxvt.scrollBar: false
-URxvt.font: xft:MesloLGS NF:size=13
+URxvt.font: xft:Hack:size=13
 URxvt.letterSpace: -1
+URxvt.borderless: true
 
-URxvt*.foreground:   white
-URxvt*.background:   rgba:0000/0000/0000/8888
-URxvt*depth: 32
-URxvt*borderless: true
+! special
+*.foreground:   #abb2bf
+*.background:   #1e2127
 
 ! black
-*color0: #1a1b26
-*color8: #4e5173
+*.color0:       #5c6370
+*.color8:       #5c6370
 
 ! red
-*color1: #F7768E
-*color9: #F7768E
+*.color1:       #e06c75
+*.color9:       #e06c75
 
 ! green
-*color2: #9ECE6A
-*color10: #9ECE6A
+*.color2:       #98c379
+*.color10:      #98c379
 
 ! yellow
-*color3: #E0AF68
-*color11: #E0AF68
+*.color3:       #d19a66
+*.color11:      #d19a66
 
 ! blue
-*color4: #7AA2F7
-*color12: #7AA2F7
+*.color4:       #61afef
+*.color12:      #61afef
 
 ! magenta
-*color5: #9a7ecc
-*color13: #9a7ecc
+*.color5:       #c678dd
+*.color13:      #c678dd
 
 ! cyan
-*color6: #4abaaf
-*color14: #4abaaf
+*.color6:       #56b6c2
+*.color14:      #56b6c2
 
 ! white
-*color7: #acb0d0
-*color15: #acb0d0
+*.color7:       #ffffff
+*.color15:      #ffffff

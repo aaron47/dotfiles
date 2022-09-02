@@ -43,7 +43,6 @@ PROMPT+="\$vcs_info_msg_0_ "
 # https://stevelosh.com/blog/2010/02/my-extravagant-zsh-prompt/
 # also ascii escape codes
 
-
 # History in cache directory:
 HISTSIZE=10000
 SAVEHIST=10000
@@ -113,4 +112,4 @@ macchina
 # Load zsh-syntax-highlighting; should be last.
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
-
+source /usr/share/zsh/plugins/zsh-autopair/autopair.zsh 2>/dev/null
