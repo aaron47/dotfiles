@@ -6,22 +6,17 @@
     "graphql",
     "html",
     "yaml",
-    "json"
+    "json",
+    "typescript",
+    "typescriptreact"
   ],
-  "snippets.ultisnips.directories": [
-    "UltiSnips",
-    "~/.config/nvim/utils/snips"
-  ],
+  "snippets.ultisnips.directories": ["UltiSnips", "~/.config/nvim/utils/snips"],
   "java.home": "/usr/lib/jvm/java-15-openjdk/",
   "languageserver": {
     "dockerfile": {
       "command": "docker-langserver",
-      "filetypes": [
-        "dockerfile"
-      ],
-      "args": [
-        "--stdio"
-      ]
+      "filetypes": ["dockerfile"],
+      "args": ["--stdio"]
     }
   },
   "explorer.icon.enableVimDevicons": true,

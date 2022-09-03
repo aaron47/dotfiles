@@ -43,5 +43,6 @@ call plug#begin('~/.config/nvim/plugged')
         Plug 'ayu-theme/ayu-vim'
         Plug 'dracula/vim', { 'as': 'dracula' }
         Plug 'phanviet/vim-monokai-pro'
+        Plug 'norcalli/nvim-colorizer.lua'
     endif
 call plug#end()
