@@ -461,7 +461,9 @@ myManageHook = composeAll
   , className =? "Yad"             --> doCenterFloat
   , title =? "Oracle VM VirtualBox Manager"  --> doFloat
   , title =? "Mozilla Firefox"     --> doShift ( myWorkspaces !! 1 )
-  , className =? "Brave-browser"   --> doShift ( myWorkspaces !! 1 )
+  , className =? "Brave-browser"   --> doShift ( myWorkspaces !! 0 )
+  , className =? "discord"   --> doShift ( myWorkspaces !! 2 )
+  , className =? "spotify"   --> doShift ( myWorkspaces !! 3 )
   , className =? "mpv"             --> doShift ( myWorkspaces !! 7 )
   , className =? "Gimp"            --> doShift ( myWorkspaces !! 8 )
   , className =? "VirtualBox Manager" --> doShift  ( myWorkspaces !! 4 )
@@ -547,6 +549,7 @@ myKeys c =
   , ("M1-s", addName "Launch spotify"           $ spawn ("spotify"))
   , ("M-p", addName "Launch dmenu"           $ spawn ("dmenu_run"))
   , ("M1-f", addName "Launch nemo"           $ spawn ("nemo"))
+  , ("M-S-e", addName "Launch wlogout"           $ spawn ("wlogout"))
   ]
 
   ^++^ subKeys "Monitors"
