@@ -82,7 +82,7 @@ import XMonad.Util.SpawnOnce
       -- SolarizedDark
       -- SolarizedLight
       -- TomorrowNight
-import Colors.GruvboxDark
+import Colors.Nord
 
 myFont :: String
 myFont = "xft:SauceCodePro Nerd Font Mono:regular:size=9:antialias=true:hinting=true"
@@ -124,7 +124,7 @@ myStartupHook = do
   spawnOnce "picom &"
   spawnOnce "lxsessions"
   spawnOnce "nm-applet"
-  spawnOnce "feh --bg-fill ~/dotfiles/Wallpapers/wall.webp &"  --feh 
+  spawnOnce "feh --bg-fill ~/dotfiles/Wallpapers/background.png &"  --feh 
   setWMName "XMonad"
 
 myNavigation :: TwoD a (Maybe a)
@@ -631,7 +631,7 @@ myKeys c =
 main :: IO ()
 main = do
   -- Launching three instances of xmobar on their monitors.
-  xmproc0 <- spawnPipe ("xmobar -x 0 $HOME/.config/xmobar/" ++ colorScheme ++ "-xmobarrc")
+  xmproc0 <- spawnPipe ("xmobar $HOME/.config/xmobar/" ++ colorScheme ++ "-xmobarrc")
   -- the xmonad, ya know...what the WM is named after!
   xmonad $ addDescrKeys' ((mod4Mask, xK_F1), showKeybindings) myKeys $ ewmh $ docks $ def
     { manageHook         = myManageHook <+> manageDocks
