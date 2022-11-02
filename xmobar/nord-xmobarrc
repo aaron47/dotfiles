@@ -38,7 +38,7 @@ Config { font            = "xft:Ubuntu:weight=bold:pixelsize=13:antialias=true:h
                     , Run Memory ["-t", "<fn=2>\xf233</fn>  mem: <used>M (<usedratio>%)"] 20
                         -- Disk space free
                     , Run DiskU [("/", "<fn=2>\xf0c7</fn>  hdd: <free> free")] [] 60
-                    , Run Com "echo" ["<fn=2>\xf242</fn>"] "baticon" 3600
+                    , Run Com "echo" ["<fn=2>\xf240</fn>"] "baticon" 3600
                         -- Battery
                     , Run BatteryP ["BAT1"] ["-t", "bat: (<left>%)"] 360
                         -- Time and date
