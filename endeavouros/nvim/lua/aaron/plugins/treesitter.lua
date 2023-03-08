@@ -36,3 +36,15 @@ treesitter.setup({
 	-- auto install above language parsers
 	auto_install = true,
 })
+
+require("nvim-treesitter.configs").setup({
+	rainbow = {
+		enable = true,
+		-- list of languages you want to disable the plugin for
+		disable = { "html", "jsx", "tsx", "typescript", "ts" },
+		-- Which query to use for finding delimiters
+		query = "rainbow-parens",
+		-- Highlight the entire buffer all at once
+		strategy = require("ts-rainbow.strategy.global"),
+	},
+})

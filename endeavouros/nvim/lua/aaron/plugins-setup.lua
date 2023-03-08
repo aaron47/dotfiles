@@ -13,7 +13,7 @@ local packer_bootstrap = ensure_packer() -- true if packer was just installed
 
 -- autocommand that reloads neovim and installs/updates/removes plugins
 -- when file is saved
-vim.cmd([[ 
+vim.cmd([[
   augroup packer_user_config
     autocmd!
     autocmd BufWritePost plugins-setup.lua source <afile> | PackerSync
@@ -35,6 +35,12 @@ return packer.startup(function(use)
 
 	use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme
 	use("catppuccin/nvim")
+	use("dracula/vim")
+	use("navarasu/onedark.nvim")
+	use("folke/tokyonight.nvim")
+  use("Mofiqul/vscode.nvim")
+  use("rebelot/kanagawa.nvim")
+  use("drewtempelmeyer/palenight.vim")
 
 	use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
 
@@ -109,10 +115,11 @@ return packer.startup(function(use)
 	-- git integration
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
 
-  -- angular
-  -- a fork of nvim-treesitter that fixes inline html
+	use("norcalli/nvim-colorizer.lua")
+	use("andweeb/presence.nvim")
+	use("github/copilot.vim")
+	use("HiPhish/nvim-ts-rainbow2")
   use({ "elgiano/nvim-treesitter-angular", branch = "topic/jsx-fix" })
-  use("nvim-treesitter/nvim-treesitter-angular")
 
 	if packer_bootstrap then
 		require("packer").sync()

@@ -104,6 +104,11 @@ _G.packer_plugins = {
     path = "/home/ion/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["copilot.vim"] = {
+    loaded = true,
+    path = "/home/ion/.local/share/nvim/site/pack/packer/start/copilot.vim",
+    url = "https://github.com/github/copilot.vim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/home/ion/.local/share/nvim/site/pack/packer/start/friendly-snippets",
@@ -113,6 +118,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ion/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
+  ["kanagawa.nvim"] = {
+    loaded = true,
+    path = "/home/ion/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
+    url = "https://github.com/rebelot/kanagawa.nvim"
   },
   ["lspkind.nvim"] = {
     loaded = true,
@@ -164,6 +174,11 @@ _G.packer_plugins = {
     path = "/home/ion/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
+  ["nvim-colorizer.lua"] = {
+    loaded = true,
+    path = "/home/ion/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
+    url = "https://github.com/norcalli/nvim-colorizer.lua"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/home/ion/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
@@ -191,20 +206,40 @@ _G.packer_plugins = {
     path = "/home/ion/.local/share/nvim/site/pack/packer/opt/nvim-ts-autotag",
     url = "https://github.com/windwp/nvim-ts-autotag"
   },
+  ["nvim-ts-rainbow2"] = {
+    loaded = true,
+    path = "/home/ion/.local/share/nvim/site/pack/packer/start/nvim-ts-rainbow2",
+    url = "https://github.com/HiPhish/nvim-ts-rainbow2"
+  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/home/ion/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
+  },
+  ["onedark.nvim"] = {
+    loaded = true,
+    path = "/home/ion/.local/share/nvim/site/pack/packer/start/onedark.nvim",
+    url = "https://github.com/navarasu/onedark.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/ion/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
+  ["palenight.vim"] = {
+    loaded = true,
+    path = "/home/ion/.local/share/nvim/site/pack/packer/start/palenight.vim",
+    url = "https://github.com/drewtempelmeyer/palenight.vim"
+  },
   ["plenary.nvim"] = {
     loaded = true,
     path = "/home/ion/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["presence.nvim"] = {
+    loaded = true,
+    path = "/home/ion/.local/share/nvim/site/pack/packer/start/presence.nvim",
+    url = "https://github.com/andweeb/presence.nvim"
   },
   ["telescope-fzf-native.nvim"] = {
     loaded = true,
@@ -216,10 +251,20 @@ _G.packer_plugins = {
     path = "/home/ion/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["tokyonight.nvim"] = {
+    loaded = true,
+    path = "/home/ion/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
+    url = "https://github.com/folke/tokyonight.nvim"
+  },
   ["typescript.nvim"] = {
     loaded = true,
     path = "/home/ion/.local/share/nvim/site/pack/packer/start/typescript.nvim",
     url = "https://github.com/jose-elias-alvarez/typescript.nvim"
+  },
+  vim = {
+    loaded = true,
+    path = "/home/ion/.local/share/nvim/site/pack/packer/start/vim",
+    url = "https://github.com/dracula/vim"
   },
   ["vim-ReplaceWithRegister"] = {
     loaded = true,
@@ -245,6 +290,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ion/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator",
     url = "https://github.com/christoomey/vim-tmux-navigator"
+  },
+  ["vscode.nvim"] = {
+    loaded = true,
+    path = "/home/ion/.local/share/nvim/site/pack/packer/start/vscode.nvim",
+    url = "https://github.com/Mofiqul/vscode.nvim"
   }
 }
 
