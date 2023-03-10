@@ -38,10 +38,10 @@ return packer.startup(function(use)
 	use("dracula/vim")
 	use("navarasu/onedark.nvim")
 	use("folke/tokyonight.nvim")
-  use("Mofiqul/vscode.nvim")
-  use("rebelot/kanagawa.nvim")
-  use("drewtempelmeyer/palenight.vim")
-
+	use("Mofiqul/vscode.nvim")
+	use("rebelot/kanagawa.nvim")
+	use("drewtempelmeyer/palenight.vim")
+	use("rose-pine/neovim")
 	use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
 
 	use("szw/vim-maximizer") -- maximizes and restores current window
@@ -119,9 +119,22 @@ return packer.startup(function(use)
 	use("andweeb/presence.nvim")
 	use("github/copilot.vim")
 	use("HiPhish/nvim-ts-rainbow2")
-  use({ "elgiano/nvim-treesitter-angular", branch = "topic/jsx-fix" })
+	use({ "elgiano/nvim-treesitter-angular", branch = "topic/jsx-fix" })
+	use({
+		"themaxmarchuk/tailwindcss-colors.nvim",
+		-- load only on require("tailwindcss-colors")
+		module = "tailwindcss-colors",
+		-- run the setup function after plugin is loaded
+		config = function()
+			-- pass config options here (or nothing to use defaults)
+			require("tailwindcss-colors").setup()
+		end,
+	})
 
 	if packer_bootstrap then
 		require("packer").sync()
 	end
+
+
+  use("xiyaowong/nvim-transparent")
 end)

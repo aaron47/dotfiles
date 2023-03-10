@@ -14,6 +14,4 @@ require("aaron.plugins.lsp.null-ls")
 require("aaron.plugins.autopairs")
 require("aaron.plugins.treesitter")
 require("aaron.plugins.gitsigns")
-require("onedark").setup({
-  style = "deep"
-})
+require("aaron.plugins.transparent")

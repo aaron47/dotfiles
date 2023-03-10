@@ -1,4 +1,6 @@
 local opt = vim.opt
+-- thick ass cursor
+opt.guicursor = ''
 
 -- line numbers
 opt.relativenumber = true
@@ -16,15 +18,20 @@ opt.wrap = false
 -- search settings
 opt.ignorecase = true
 opt.smartcase = true
+opt.hlsearch = false
+opt.incsearch = true
+
 
 -- cursor line
-opt.cursorline = true
-opt.cursorcolumn = true
+-- opt.cursorline = true
+-- opt.cursorcolumn = true
 
 -- appearance
 opt.termguicolors = true
-opt.background = "dark"
+-- opt.background = "dark"
 opt.signcolumn = "yes"
+opt.scrolloff = 8
+opt.updatetime = 50
 
 -- backspace
 opt.backspace = "indent,eol,start"
