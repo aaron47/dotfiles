@@ -43,6 +43,8 @@ local on_attach = function(client, bufnr)
     keymap.set("n", "<leader>oi", ":TypescriptOrganizeImports<CR>") -- organize imports (not in youtube nvim video)
     keymap.set("n", "<leader>ru", ":TypescriptRemoveUnused<CR>") -- remove unused variables (not in youtube nvim video)
   end
+
+  require("tailwindcss-colors").buf_attach(bufnr) -- enable tailwindcss color highlighting
 end
 
 -- used to enable autocompletion (assign to every lsp server config)
@@ -109,3 +111,15 @@ lspconfig["lua_ls"].setup({
     },
   },
 })
+
+lspconfig['svelte'].setup({
+  capabilities = capabilities,
+  on_attach = on_attach,
+})
+
+lspconfig['astro'].setup({
+  capabilities = capabilities,
+  on_attach = on_attach,
+})
+
+

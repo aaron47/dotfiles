@@ -35,12 +35,6 @@ return packer.startup(function(use)
 
 	use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme
 	use("catppuccin/nvim")
-	use("dracula/vim")
-	use("navarasu/onedark.nvim")
-	use("folke/tokyonight.nvim")
-	use("Mofiqul/vscode.nvim")
-	use("rebelot/kanagawa.nvim")
-	use("drewtempelmeyer/palenight.vim")
 	use("rose-pine/neovim")
 	use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
 
@@ -115,11 +109,21 @@ return packer.startup(function(use)
 	-- git integration
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
 
-	use("norcalli/nvim-colorizer.lua")
+	use({
+		"norcalli/nvim-colorizer.lua",
+		config = function()
+			require("colorizer").setup()
+		end,
+	})
 	use("andweeb/presence.nvim")
 	use("github/copilot.vim")
 	use("HiPhish/nvim-ts-rainbow2")
 	use({ "elgiano/nvim-treesitter-angular", branch = "topic/jsx-fix" })
+	use("xiyaowong/nvim-transparent")
+	use("nvim-lua/popup.nvim")
+	use("nvim-telescope/telescope-media-files.nvim")
+
+	-- tailwindcss stuff
 	use({
 		"themaxmarchuk/tailwindcss-colors.nvim",
 		-- load only on require("tailwindcss-colors")
@@ -131,10 +135,10 @@ return packer.startup(function(use)
 		end,
 	})
 
+	use("tpope/vim-fugitive")
+	use("theprimeagen/harpoon")
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
-
-
-  use("xiyaowong/nvim-transparent")
 end)
